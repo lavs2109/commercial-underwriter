@@ -1,0 +1,124 @@
+Full End-to-End User Flow (MVP)
+1. 🔐 Login / Sign Up
+User lands on login page
+
+Options: Sign up or log in via email/password or OAuth (Google, etc.)
+
+Upon login, user is redirected to their personalized dashboard
+
+2. 🏠 Home Dashboard
+User sees:
+
+Recent underwritten deals (with status: pass/fail)
+
+ROI metrics (time saved, deals passed/failed)
+
+Option to “Start New Underwriting”
+
+Settings shortcut (buy box preferences)
+
+3. 📍 Input Property Address
+User clicks “New Underwriting”
+
+Inputs property address via text box or map search
+
+System fetches (or mocks) basic property data (e.g., units, build year, size)
+
+4. 📂 Upload T12 and Rent Roll
+User uploads:
+
+T12 (Trailing 12 months financials) PDF or Excel
+
+Rent Roll PDF or Excel
+
+Upload status + file preview displayed
+
+Backend parses documents (OCR or tabular parsing for MVP)
+
+Normalized financial data is shown in editable form
+
+5. ⚙️ Set Investment Criteria (Buy Box)
+User defines or loads saved Buy Box:
+
+Min Cash-on-Cash Return
+
+Minimum Cap Rate
+
+Year Built Threshold
+
+Target Hold Period (in years)
+
+User can save criteria for future deals
+
+6. 🌐 Market Data Pull (Mocked or Live)
+System automatically pulls regional data for analysis:
+
+CoStar: Rent comps, occupancy, avg unit revenue
+
+Zillow: Pricing trends, value ranges
+
+NeighborhoodScout: Crime scores, school ratings, demographics
+
+For MVP: Use simulated/mock JSON if API access is unavailable
+
+7. 🧠 Deal Underwriting & AI Analysis
+System calculates key financials:
+
+Cash-on-Cash Return
+
+Cap Rate
+
+DSCR
+
+AI/Logic compares deal metrics to Buy Box
+
+Outcome shown:
+
+✅ PASS — meets or exceeds all criteria
+
+❌ FAIL — shows which criteria were not met
+
+Optional: AI suggests tweaks (e.g., raise rent, cut expenses)
+
+8. 🖥️ Editable Assumptions (Optional)
+User can adjust:
+
+Vacancy rates
+
+Operating expenses
+
+Financing terms
+
+Hold period assumptions
+
+Re-run analysis on new assumptions
+
+9. 📤 Export Results
+After analysis, user can download:
+
+📊 Excel Underwriting Model (with formulas & inputs)
+
+📄 PDF Investment Summary (auto-generated executive brief with charts)
+
+✍️ LOI Generator — editable letter of intent pre-filled with key terms
+
+10. 📁 Save to Dashboard
+The deal is saved to user’s dashboard
+
+User can revisit, duplicate, or delete the underwriting report
+
+Pass/fail rate, hours saved, and deal count are updated
+
+11. ⚙️ Settings & Account
+User can:
+
+Update Buy Box defaults
+
+Change password or auth method
+
+View total deals, pass rate, and hours saved
+
+Logout
+
+🎯 Summary: One-Line Flow
+Login → Dashboard → New Deal → Input Address → Upload Files → Set Buy Box → Analyze → View Results → Export → Save & Track
